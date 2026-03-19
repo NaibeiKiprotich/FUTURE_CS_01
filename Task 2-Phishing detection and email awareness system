@@ -1,0 +1,5 @@
+This task involves phishing email detection and the awareness system. The assignement nvolves a variety of datasets aimed was compiled by researchers to study phishing email tactics. It combines emails from a variety of sources to create a comprehensive resource for analysis.
+A ariety of tools have been used in this task to achieve the goal of detceting phdhing emails and creating an awareness sytem.The tols include :Email headr analyzer, browser tools, Google Docs/MS word/PDF
+The key features in th include the following: identifying phishing indicators(spoofed sender, fake domains, malicious code), classification iof emails as safe, suspicious or spoofing., explaining phishing techniques in simle, business friendly language, providing clear prevention and awareness gudelines for users.
+The main outcome/delverable/KPI is: Creating a professionalphishing detection & awareness report including phishing examples, risk explanation and prevention guidelines, documented and submitted through a public Github repository.
+
