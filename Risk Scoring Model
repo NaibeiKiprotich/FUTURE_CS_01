@@ -1,0 +1,16 @@
+# SmartShield Risk Scoring Model
+
+Each email is scored based on indicators:
+
+| Indicator                  | Score |
+|--------------------------|------|
+| Urgent language          | +2   |
+| Suspicious links         | +2   |
+| Request for credentials  | +3   |
+| Unknown sender           | +2   |
+| Poor grammar/spelling    | +1   |
+
+## Classification:
+- 0–2 → Safe
+- 3–5 → Suspicious
+- 6+ → Phishing
