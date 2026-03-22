@@ -1,5 +1,50 @@
-This task involves phishing email detection and the awareness system. The assignement nvolves a variety of datasets aimed was compiled by researchers to study phishing email tactics. It combines emails from a variety of sources to create a comprehensive resource for analysis.
-A ariety of tools have been used in this task to achieve the goal of detceting phdhing emails and creating an awareness sytem.The tols include :Email headr analyzer, browser tools, Google Docs/MS word/PDF
-The key features in th include the following: identifying phishing indicators(spoofed sender, fake domains, malicious code), classification iof emails as safe, suspicious or spoofing., explaining phishing techniques in simle, business friendly language, providing clear prevention and awareness gudelines for users.
-The main outcome/delverable/KPI is: Creating a professionalphishing detection & awareness report including phishing examples, risk explanation and prevention guidelines, documented and submitted through a public Github repository.
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartShield Phishing Checker</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        textarea { width: 100%; height: 150px; }
+        button { padding: 10px; margin-top: 10px; }
+        .result { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
 
+<h2>SmartShield Email Risk Checker</h2>
+
+<p>Paste email content below:</p>
+<textarea id="emailInput"></textarea>
+
+<br>
+<button onclick="analyzeEmail()">Analyze Email</button>
+
+<div class="result" id="result"></div>
+
+<script>
+function analyzeEmail() {
+    let text = document.getElementById("emailInput").value.toLowerCase();
+    let score = 0;
+
+    if (text.includes("urgent")) score += 2;
+    if (text.includes("click here")) score += 2;
+    if (text.includes("verify your account")) score += 3;
+    if (text.includes("bank")) score += 1;
+    if (text.includes("password")) score += 3;
+
+    let result = "";
+
+    if (score >= 6) {
+        result = "⚠️ PHISHING EMAIL";
+    } else if (score >= 3) {
+        result = "⚠️ SUSPICIOUS EMAIL";
+    } else {
+        result = "✅ SAFE EMAIL";
+    }
+
+    document.getElementById("result").innerText = result;
+}
+</script>
+
+</body>
+</html>
