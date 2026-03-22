@@ -1,1 +1,36 @@
+# API Request Samples
 
+## Request 1: Fetch Users
+GET /users
+
+Full URL:
+https://jsonplaceholder.typicode.com/users
+
+Result:
+- Returns complete user records
+- No authentication headers required
+
+---
+
+## Request 2: Create Resource
+POST /posts
+
+Payload:
+{
+  "title": "test entry",
+  "body": "unvalidated input",
+  "userId": 99
+}
+
+Result:
+- Request accepted without validation
+- Response echoes submitted data
+
+---
+
+## Request 3: Repeated Access Test
+GET /posts (multiple rapid requests)
+
+Result:
+- No blocking or throttling observed
+- API responds consistently without delay
