@@ -1,0 +1,7 @@
+if (text.includes("urgent")) score += 2;
+if (text.includes("click here")) score += 2;
+if (text.includes("verify your account")) score += 3;
+
+if (score >= 6) result = "PHISHING";
+else if (score >= 3) result = "SUSPICIOUS";
+else result = "SAFE";
